@@ -62,4 +62,9 @@ class CustomersController extends Controller
     {
         //
     }
+
+    public function getInfo()
+    {
+        return Customer::with('user')->get();
+    }
 }

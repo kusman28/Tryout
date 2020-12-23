@@ -10,4 +10,9 @@ class OrderDetail extends Model
     protected $fillable = [
         'product', 'qty', 'price', 'discount', 'grand_total'
     ];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

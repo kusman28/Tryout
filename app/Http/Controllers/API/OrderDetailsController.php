@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\OrderDetail;
+use App\Order;
 
 class OrderDetailsController extends Controller
 {
@@ -68,4 +69,8 @@ class OrderDetailsController extends Controller
         return view('placeorder');
     }
 
+    public function getOrder()
+    {
+        return Order::with('customer')->get();
+    }
 }

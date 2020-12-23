@@ -21,3 +21,7 @@ Route::apiResources(['products' => 'API\ProductsController']);
 Route::apiResources(['customers' => 'API\CustomersController']);
 Route::apiResources(['orders' => 'API\OrdersController']);
 Route::apiResources(['order-details' => 'API\OrderDetailsController']);
+
+
+Route::get('/customer-info', 'API\CustomersController@getInfo');
+Route::get('/orders-info', 'API\OrderDetailsController@getOrder');
